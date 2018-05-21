@@ -1,0 +1,475 @@
+@import mixins
+@import media
+@import sprites
+@import normalize
+
+$font-weight: 400
+$font-size: 14px
+$line-height: 25px
+$font-family: "Montserrat"
+$color: #000000
+$color-white: #ffffff
+
+
+/* MAIN STYLES
+/* ================================================ */
+
+
+body 	
+	//min-width: 320px
+	max-width: 1900px
+	color: $color
+	font-weight: $font-weight
+	font-size: $font-size
+	line-height: $line-height
+	font-family: "Montserrat"
+	
+
+img
+	display: block
+	width: 100%
+
+ul
+	list-style: none
+
+.wrapper
+	max-width: 1200px
+	margin: 0 auto
+
+
+/* Header
+     ====================== */
+
+
+.header-wrap
+	padding-top: 30px
+	padding-bottom: 66px
+	
+
+.header-nav
+	margin-left: 17px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+.header-nav__logo
+	position: relative
+	&::after
+		position: absolute
+		content: ""
+		width: 35px
+		height: 10px
+		top: 17px
+		right: 20px
+		background: url('../img/header-bam.svg') center no-repeat
+	&::before
+		position: absolute
+		content: ""
+		width: 35px
+		height: 10px
+		top: 16px
+		right: 21px
+		background: url('../img/header-bam.svg') center no-repeat
+
+
+.header-nav__list
+	list-style: none
+	display: flex
+
+.header-nav__item
+	margin-left: 31px
+
+
+
+/* TopSection
+     ====================== */
+
+
+
+.top-section
+	position: relative
+	height: 800px
+	background-color: #fff
+	background: url('../img/bg-left.svg') left center no-repeat 
+	background-position: left -30px top 250px
+	background-attachment: fixed
+	overflow: hidden
+
+.top-section__wrapper
+	position: relative
+
+.top-section__header
+	max-width: 1538px
+	max-height: 407px
+	position: absolute
+	top: 150px
+	right: -70px
+
+.top-section__description
+	position: absolute
+	top: 573px
+	display: inline-block
+	font-size: 35px
+	line-height: 53px
+	color: $color-white
+
+.top-section__image
+	max-width: 607px
+	max-height: 617px
+	position: absolute
+	right: 0
+	top: 300px
+
+	
+.left-wave
+	max-width: 1440px
+	position: absolute
+	left: -40px
+	top: 0
+
+.right-wave
+	height: 1700px
+	width: 1900px
+	position: absolute
+	background: url('../img/bg-right.png') bottom center no-repeat 
+	right: 0
+	bottom: -100%
+	
+
+
+
+/* Blog-section
+     ====================== */
+
+
+
+.blog
+	//z-index: 1
+	padding-top: 100px 
+	padding-bottom: 50px 
+	background: #fafafa
+
+.posts
+	margin-bottom: 80px
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+.post
+	display: flex 
+	flex-wrap: wrap
+	margin-bottom: 50px
+	padding: 41px 45px 28px 45px
+	background-color: $color-white
+
+.post-left
+	margin-right: 32px
+
+
+.image-container
+	display: flex
+	align-items: flex-end
+	width: 130px
+	height: 148px
+	position: relative
+
+.letter-a
+	width: 80px
+	height: 71px
+	position: absolute
+	top: 0
+	right: 70px
+
+.letter-a-bg
+	width: 80px
+	height: 71px
+	position: absolute
+	top: -3px
+	right: 66px
+
+.post-right__description
+	max-width: 318px
+	font-weight: 500
+	margin-bottom: 16px
+
+.icons-list
+	display: flex
+	padding-left: 20px
+
+.icon-item
+	position: relative
+	margin-right: 32px
+	font-size: 12px
+	line-height: 14px
+	
+.icon-watch:before
+	content: ""
+	position: absolute
+	left: -20px
+	top: -1px
+	width: 15px
+	height: 15px
+	background: url('../img/combined-shape.svg') center no-repeat
+
+.icon-comment:before
+	content: ""
+	position: absolute
+	left: -20px
+	top: -1px
+	width: 15px
+	height: 15px
+	background: url('../img/rectangle-9.svg') center no-repeat
+
+.icon-like:before
+	content: ""
+	position: absolute
+	left: -20px
+	top: -2px
+	width: 15px
+	height: 15px
+	background: url('../img/like.svg') center no-repeat
+
+.icon-dislike:before
+	content: ""
+	position: absolute
+	left: -20px
+	top: 0px
+	width: 15px
+	height: 15px
+	background: url('../img/dislike.png') center no-repeat
+
+.tags
+	padding-left: 22px
+	margin-top: 30px
+	position: relative
+
+.tags:before
+	content: ""
+	position: absolute
+	width: 15px
+	height: 10px
+	background: url('../img/tag-link-icon.svg') center no-repeat
+	left: 0
+	bottom: 8px
+
+.tag-link
+	font-size: 12px
+	color: #c9c9c9
+	text-decoration: underline
+
+.center-post
+	max-width: 1200x
+	padding: 60px 75px 20px 130px
+
+
+.center-post__left
+	margin-right: 185px
+
+.center-image-container
+	display: flex
+	align-items: flex-end
+	position: relative
+	width: 326px
+	height: 241px
+
+.image-left
+	width: 199px
+	height: 242px
+
+.image-right
+	width: 199px
+	height: 242px
+	position: absolute
+	top: 0
+	left: 135px
+
+.center-post__right h4
+	width: 438px
+	margin-bottom: 14px
+	font-size: 16px
+	font-weight: 500
+
+.center-post-right__description
+	width: 483px
+	padding-bottom: 40px
+
+button.show
+	width: 318px
+	font-size: 14px
+	font-weight: 500
+	border: none
+	background-color: transparent
+	opacity: 0.6
+	margin-bottom: 75px
+
+.blog-container
+	display: flex
+	flex-direction: column
+	align-items: center 
+
+
+
+/* Blog-page
+     ====================== */
+
+
+.blog-header
+	background-color: #fafafa
+	height: 424px
+
+.blog-title
+	position: relative
+	width: 652px
+	height: 175px
+
+
+.central-container
+	max-width: 652px
+	margin: 0 auto
+
+.blog-title img
+	width: 182px
+	height: 162px
+	position: absolute
+
+.blog-title img:nth-child(2)
+	left: 100px
+	z-index: 1
+
+.blog-title img:last-child
+	right: 0
+
+
+/* Blog-page__Main
+     ====================== */
+
+
+.article
+	padding-top: 73px 
+	padding-bottom: 167px
+
+.columns
+	display: flex
+	justify-content: space-between
+
+.left-column
+	display: flex
+	width: 150px
+	
+.color-bar
+	width: 8px
+	height: 1210px
+	background: linear-gradient(to bottom, #00d3cb, #00ffc4)
+
+.left-column__info
+	display: flex
+	flex-direction: column
+
+.info-block
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	position: relative
+	width: 116px
+	margin-bottom: 56px
+	margin-left: -6px
+
+.info-block img
+	width: 39px
+	height: 52px
+
+.info-block h4
+	max-width: 66px
+	line-height: 16px
+	font-size: 11px
+	font-weight: 500
+
+
+.left-column__info .first
+	height: 90px
+	margin-top: 419px
+	margin-left: -3px
+	background: linear-gradient(to right, #00d3cb, #00ffc4)
+
+.first img
+	width: 26px
+	height: 53px
+	position: absolute
+	right: -7px
+	top: 25%
+
+
+.central-column
+	max-width: 600px
+
+.central-column__title
+	font-size: 42px
+	font-weight: 300
+	line-height: 56px
+	margin-bottom: 34px
+
+
+.central-column__article p
+	font-size: 14px
+	line-height: 25px
+	font-weight: 400
+
+p.central-column__firts-article
+	font-size: 16px
+	line-height: 28px
+
+
+.central-column__article h3
+	font-size: 23px
+	font-weight: 500
+	line-height: 32px
+	margin-top: 60px
+	margin-bottom: 24px
+
+.central-column__article h4
+	font-size: 18px
+	font-weight: 500
+	line-height: 44px
+	margin-top: 44px
+	margin-bottom: 11px
+
+
+.right-column	
+	padding-top: 198px
+	display: flex
+	flex-direction: column
+	width: 201px
+
+.right-column__post
+	background-color: yellow
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.right-column-post__img
+	width: 84px
+	height: 74px
+	margin-bottom: 15px
+
+.right-column-post__link
+	font-weight: 500
+	font-size: 16px 
+	color: #00d3cb
+	line-height: 29px
+	text-decoration: underline
+
+.right-column-post__link span
+	color: #000000
+
+.right-column-post-bottom
+	margin-top: 400px
+
+.image-bottom
+	width: 105px
+	height: 126px
+	margin-bottom: 0
+
+.bottom-link 
+	color: #000000
+	text-decoration: none
